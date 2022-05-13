@@ -27,3 +27,10 @@ i {
   color: #f638dc;
   margin: 0 auto;
 }
+a {
+  color: #f638dc;
+}
+a:hover,
+button:hover {
+  color: #fff;
+}
