@@ -1,0 +1,29 @@
+body {
+  color: #f638dc;
+  background-color: #200f21;
+}
+section {
+  text-align: center;
+}
+h1 {
+  margin: 0 auto;
+  padding: 50px 50px 25px 50px;
+}
+h2 {
+  padding: 10px;
+}
+#temperatureC {
+  display: in-line;
+}
+form {
+  margin: 0 auto;
+}
+#search-Bar {
+  margin: 0 auto;
+}
+button,
+i {
+  background-color: #200f21;
+  color: #f638dc;
+  margin: 0 auto;
+}
