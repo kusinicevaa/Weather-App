@@ -29,7 +29,7 @@ function searchInput(event) {
 
 function displayWeatherCity(response) {
   let temperature = Math.round(response.data.main.temp);
-  let mainCity = document.querySelector("h1");
+  let mainCity = document.querySelector("city");
   mainCity.innerHTML = `${response.data.name}+
           ${temperature} ℃ <i class="far fa-snowflake heading"></i>`;
 }

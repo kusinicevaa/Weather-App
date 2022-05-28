@@ -20,11 +20,21 @@
   </head>
   <body>
     <section>
-      <h1 class="city">
-        <span id="#temperature">
-          <i class="far fa-snowflake heading"></i>
-        </span>
-      </h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <h1 class="city">Riga</h1>
+            <i class="far fa-snowflake heading"></i>
+          </div>
+
+          <div class="col-sm-6">
+            <h3 id="#temperature">10℃</h3>
+            <h3 class="speed">Wind speed: 5 km/h</h3>
+            <h3 class="humidity">Humidity: 45%</h3>
+          </div>
+        </div>
+      </div>
+
       <h2 class="date">Wednesday 10:59</h2>
       <div class="container">
         <form id="searchcity" style="text-align: center; margin: 0 auto">
@@ -116,7 +126,7 @@
       <br />
       <br />
       <a href="https://github.com/kusinicevaa/Weather-App">
-        Open source by Arina Kusiniceva
+        Open source by Arina K
       </a>
     </section>
     <script src="src/script.js"></script>

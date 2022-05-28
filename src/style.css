@@ -12,8 +12,10 @@ h1 {
 h2 {
   padding: 10px;
 }
-#temperatureC {
-  display: in-line;
+
+#temperature {
+  margin: 0 auto;
+  padding: 50px 50px 25px 50px;
 }
 form {
   margin: 0 auto;
