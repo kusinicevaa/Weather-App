@@ -4,6 +4,11 @@ html {
     background-color: rgba(234, 33, 162,0.3);
     color: rgba(23, 19, 19,1);
     font-family: monospace;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left:auto;
+    margin-right: auto;
+    
 }
 
 .container{ 
@@ -12,6 +17,15 @@ html {
     opacity: 1.0;
     background-color: rgba(245, 238, 238,1);
     border-radius: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 650px;
+    height:550px;
+    margin-left:auto;
+    margin-right: auto;
+
 }
 
  h1 { display: flex;
@@ -20,51 +34,41 @@ html {
 
 }
 
-.weatherInfo {
-    display: flex;
-    flex-direction: column; /* Stack .city and .about vertically */
-    align-items: flex-start;
-    width: 100%; 
-}
-
-.city {
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 44px;
-
-}
-
-.about, .weatherForecast {
+.timeInfo, .cityInfo, .search, .textinput {
     display: flex; 
-    gap: 15px; /* Add spacing between inline items */
-    justify-content: flex-start;
-    width: 100%;
-    flex-wrap: nowrap; 
+    justify-content: center;
 }
 
-/* .weatherForecast {
+.timeInfo p, .cityInfo p {
+    margin: 10px;
+    font-size: 44px;
+    font-family: monospace;
+}
+
+
+
+.futureDaysContainer {
     display: flex;
-    flex-direction: column; 
-    align-items: flex-start;
-    width: 100%; 
-} */
-
-.about p {
-    margin: 0; 
-    flex-shrink: 0; /* Prevent items from shrinking too much */
+    justify-content: space-around;
+  }
+  
+  .futureDay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(23, 19, 19, 1);
+    background-color:  rgba(234, 33, 162,0.3);
+  }
+  
+  .futureDay .temps {
+    display: flex;
+    justify-content: space-between;
+    width:100%; /* Adjust the width as necessary */
+  }
+  
+  .futureDay p {
+    margin: 10px 
 }
 
 
-
-
-
-
-.futureDay {
-    
-    color: rgba(23, 19, 19,1);
-}
-
-
-
-
-    
+  

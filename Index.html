@@ -5,81 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index</title>
     <!-- <link rel="stylesheet" href="C:\Users\kusin\Desktop\WeatherApp\style.css" /> -->
-    <link rel="stylesheet" href="C:\Users\kusin\Desktop\WeatherApp\src\Test.css">
+    <link rel="stylesheet" href="C:\Users\kusin\Desktop\WeatherApp\style.css">
   </head>
 
   <body>
     <div class="container">
         <h1>Weather Forecast</h1>
         <img src="" alt="" class="logo" />
-        <form action="search" class="search">
-            <input type="text" class="textinput">
-            <button class="btnsearch"> Search </button>
-        </form>
 
-        <div class="weatherInfo"> 
-            <p class="city">Farnborough</p>
-            <div class="about">
-                <p class="weekday">Saturday</p>
-                <p class="time">11:00</p>
-                <p class="weatherDesc">Partly cloudy</p>
-            </div>
+        <div class="timeInfo"> 
+              <p class="weekday">Saturday</p>
+              <p class="time">11:00</p>
+      </div>
+        
+        <div class="cityInfo"> 
+              <p class="city">Farnborough</p>
+              <p class="weatherDesc">Partly cloudy</p>
+              <p class="temperature">21</p>
+              <p>°C</p>
+              <i class="icon">icon image</i>    
         </div>
+ 
+
+        <form action="search" class="search">
+          <input type="text" class="textinput">
+          <button class="btnsearch"> Search </button>
+      </form>
         
         <div class="weatherForecast">
             <p class="humidity">Humidity: 89%</p>
             <p class="wind">Wind: 4.47 km/h</p>
         </div>
         
-        <div class="wetherTemperature">
-            <i class="icon">icon image</i>
-            <p class="temperature">21</p>
-            <p>°C</p>
-        </div>
+
         
 
       <br />
 
-      <div class="futureDay">
-        <p class="dayName">Monday</p>
-        <img src="" alt="" class="iconImage2" />
-        <p class="temp">14°</p>
-        <p class="nexttemp">12°</p>
+      <div class="futureDaysContainer">
+        <div class="futureDay one">
+          <p class="dayName">Monday</p>
+          <img src="" alt="" class="iconImage2" />
+          <div class="temps">
+            <p class="lowtemp">14°</p>
+            <p class="hightemp">12°</p>
+          </div>
+        </div>
+      
+        <div class="futureDay two">
+          <p class="dayName">Tuesday</p>
+          <img src="" alt="" class="iconImage2" />
+          <div class="temps">
+            <p class="lowtemp">14°</p>
+            <p class="hightemp">12°</p>
+          </div>
+        </div>
+      
+        <div class="futureDay three">
+          <p class="dayName">Wednesday</p>
+          <img src="" alt="" class="iconImage2" />
+          <div class="temps">
+            <p class="lowtemp">14°</p>
+            <p class="hightemp">12°</p>
+          </div>
+        </div>
+      
+        <div class="futureDay four">
+          <p class="dayName">Thursday</p>
+          <img src="" alt="" class="iconImage2" />
+          <div class="temps">
+            <p class="lowtemp">14°</p>
+            <p class="hightemp">12°</p>
+          </div>
+        </div>
+      
+        <div class="futureDay five">
+          <p class="dayName">Friday</p>
+          <img src="" alt="" class="iconImage2" />
+          <div class="temps">
+            <p class="lowtemp">14°</p>
+            <p class="hightemp">12°</p>
+          </div>
+        </div>
       </div>
-
-      <div class="futureDay">
-        <p class="dayName">Tuesday</p>
-        <img src="" alt="" class="iconImage2" />
-        <p class="temp">14°</p>
-        <p class="nexttemp">12°</p>
-      </div>
-
-      <br />
-
-      <div class="futureDay">
-        <p class="dayName">Wednesday</p>
-        <img src="" alt="" class="iconImage2" />
-        <p class="temp">14°</p>
-        <p class="nexttemp">12°</p>
-      </div>
-
-      <br />
-
-      <div class="futureDay">
-        <p class="dayName">Thursday</p>
-        <img src="" alt="" class="iconImage2" />
-        <p class="temp">14°</p>
-        <p class="nexttemp">12°</p>
-      </div>
-
-      <br />
-
-      <div class="futureDay">
-        <p class="dayName">Friday</p>
-        <img src="" alt="" class="iconImage2" />
-        <p class="temp">14°</p>
-        <p class="nexttemp">12°</p>
-      </div>
+      
 
       <div>
         <p>
@@ -88,6 +97,7 @@
           <a href="">hosted on Netlify</a>
         </p>
       </div>
+      
     </div>
   </body>
 </html>
