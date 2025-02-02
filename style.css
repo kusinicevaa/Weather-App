@@ -1,32 +1,36 @@
 /* using rgba because using hex colours complicates the opacity settings*/
 
-html {
-    background-color: rgba(234, 33, 162,0.3);
-    color: rgba(23, 19, 19,1);
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     font-family: monospace;
-    margin: auto;
-    
 }
 
-.container{ 
-    /* display: flex;
-    justify-content: space-between; */
-    opacity: 1.0;
-    background-color: rgba(245, 238, 238,1);
+html {
+    background-color: rgba(234, 33, 162, 0.3);
+    color: rgba(23, 19, 19, 1);
+}
+
+.container {
+    background-color: rgba(245, 238, 238, 1);
     border-radius: 5%;
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 5%;
     padding-bottom: 5%;
-    width: 650px;
-    height:550px;
-    margin:auto;
-
+    width: 550px;
+    height: 370px;
 }
+
+
 
  h1 { display: flex;
     justify-content: center;
-    font-size: 48px;
+    font-size: 36px;
     margin: auto;
     padding: 0px;
 
@@ -41,26 +45,25 @@ html {
 
 .timeInfo p, .cityInfo p, .icon {
     margin: 10px;
-    font-size: 36px;
+    font-size: 20px;
     font-family: monospace;
     margin: 2px;
     padding: 2px;
 }
-
-.search, .textinput{
-    padding-top: 20px;
-    padding-bottom: 20px;
+.btnsearch {    padding-top: 10px;
+    padding-bottom: 10px;
     margin: 10px;
-    width: auto;
-    height:  auto;
+    width: 170px;
+    height:  35px;
 
 }
-
-link {
-    padding:10px;
-    margin:2px;
+ .textinput{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 10px;
+    width: 500px;
+    height:  10px;
 }
-
 
 .futureDaysContainer {
     display: flex;
@@ -72,24 +75,34 @@ link {
     flex-direction: column;
     align-items: center;
     font-family: monospace;
-    font-size: 22px;
+    font-size: 20px;
     color: rgba(23, 19, 19, 1);
     background-color:  rgba(234, 33, 162,0.3);
-    width: 125px;
-    height: 130px;
+    width: 105px;
+    height: 95px;
     border-radius: 15px;
   }
   
   .futureDay .temps {
     display: flex;
     justify-content: space-between;
-    /* padding: 2px; */
-    width:100%; /* Adjust the width as necessary */
-  }
+    width:100%; 
+  } 
   
   .futureDay p {
-    margin: 10px 
+    margin: 5px 
 }
 
-
+.link {
+    padding:5px;
+    margin:5px;
+    font-family: monospace;
+    font-size: 16px;
+}
   
+
+img {
+    width:50px;
+    height:25px;
+}
+
