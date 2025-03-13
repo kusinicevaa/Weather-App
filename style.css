@@ -36,14 +36,14 @@ html {
 
 }
 
-.timeInfo, .cityInfo, .search, .textinput {
+.date, .timeInfo, .cityInfo, .search, .textinput, .weatherForecast, .wind, .humidity {
     display: flex; 
     justify-content: center;
     margin: 2px;
     padding: 2px;
 }
 
-.timeInfo p, .cityInfo p, .icon {
+.date, .timeInfo p, .cityInfo p, .icon, .weatherForecast, .wind, .hunidity {
     margin: 10px;
     font-size: 20px;
     font-family: monospace;
