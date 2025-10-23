@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Index</title>
     <link rel="stylesheet" href="style.css">
-    <script src="src/script.js"></script>
+    <script src="src\script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
@@ -13,26 +14,25 @@
         <h1 >Weather Forecast</h1>
 
         <div class="timeInfo">
-          <p class="city">Farnborough:</p> 
-              <p class="weekday">Saturday 25th feb,</p>
+          <p class="city" id="city">Farnborough:</p> 
+              <p class="weekday">Saturday <p class="date">25th feb,</p> </p>
               <p class="time">11:00</p>
       </div>
         
         <div class="cityInfo">              
               <p class="weatherDesc">Partly cloudy</p>
               <p class="temperature">21</p>
-              <p>°C</p>
-              <img src="C:\Users\kusin\Desktop\WeatherApp\src\reshot-icon-sun-S9ZW4T6UGQ.svg" alt="" class="icon"> </img>    
+              <img class="weatherIcon" src="C:\Users\kusin\Desktop\WeatherApp\src\reshot-icon-sun-S9ZW4T6UGQ.svg" alt=""> </img>    
         </div>
 
          <div class="weatherForecast">
-            <p class="humidity">Humidity: 89%</p>
+            <p class="humidity">Humidity: 89</p>
             <p class="wind">Wind: 4.47 km/h</p>
         </div>
         
         <form action="search" class="search">
           <input type="text" class="textinput">
-          <button class="btnsearch"> Search </button>
+          <button class="btnsearch" type="button"> Search </button>
       </form>
 
       <br />
