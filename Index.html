@@ -3,96 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="src\script.js"></script>
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="src/script.js" defer></script>
   </head>
 
   <body>
     <div class="container">
-        <h1 >Weather Forecast</h1>
+      <h1>Weather Forecast</h1>
+      <button class="unitToggle" type="button">Switch to Imperial</button>
 
-        <div class="timeInfo">
-          <p class="city" id="city">Farnborough:</p> 
-              <p class="weekday">Saturday <p class="date">25th feb,</p> </p>
-              <p class="time">11:00</p>
+      <!-- ✅ Inline city, weekday, date, and time -->
+      <div class="datetime">
+        <p class="city" id="city">Farnborough</p>
+        <p class="weekday">Saturday</p>
+        <p class="date">25 Oct 2025</p>
+        <p class="time">18:48</p>
       </div>
-        
-        <div class="cityInfo">              
-              <p class="weatherDesc">Partly cloudy</p>
-              <p class="temperature">21</p>
-              <img class="weatherIcon" src="C:\Users\kusin\Desktop\WeatherApp\src\reshot-icon-sun-S9ZW4T6UGQ.svg" alt=""> </img>    
-        </div>
 
-         <div class="weatherForecast">
-            <p class="humidity">Humidity: 89</p>
-            <p class="wind">Wind: 4.47 </p>
-        </div>
-        
-        <form action="search" class="search">
-          <input type="text" class="textinput">
-          <button class="btnsearch" type="button"> Search </button>
+      <!-- ✅ Current weather info -->
+      <div class="cityInfo">
+        <p class="weatherDesc">Partly cloudy</p>
+        <p class="temperature">21°C</p>
+        <img class="weatherIcon" src="src/reshot-icon-sun-S9ZW4T6UGQ.svg" alt="Weather icon" />
+      </div>
+
+      <div class="weatherForecast">
+        <p class="humidity">Humidity: 89%</p>
+        <p class="wind">Wind: 4.47 km/h</p>
+      </div>
+
+      <!-- ✅ Search bar -->
+      <form class="search">
+        <input type="text" class="textinput" placeholder="Enter city..." />
+        <button class="btnsearch" type="button">Search</button>
       </form>
 
-      <br />
+      <!-- ✅ Forecast cards will be injected here -->
+      <div class="forecast"></div>
 
-      <div class="futureDaysContainer">
-        <div class="futureDay one">
-          <p class="dayName">Monday</p>
-          <img src="C:\Users\kusin\Desktop\WeatherApp\src\reshot-icon-sun-S9ZW4T6UGQ.svg" alt="" class="iconImage2" />
-          <div class="temps">
-            <p class="lowtemp">14°</p>
-            <p class="hightemp">12°</p>
-          </div>
-        </div>
-      
-        <div class="futureDay two">
-          <p class="dayName">Tuesday</p>
-          <img src="C:\Users\kusin\Desktop\WeatherApp\src\reshot-icon-sun-S9ZW4T6UGQ.svg" alt="" class="iconImage2" />
-          <div class="temps">
-            <p class="lowtemp">14°</p>
-            <p class="hightemp">12°</p>
-          </div>
-        </div>
-      
-        <div class="futureDay three">
-          <p class="dayName">Wednesday</p>
-          <img src="C:\Users\kusin\Desktop\WeatherApp\src\reshot-icon-sun-S9ZW4T6UGQ.svg" alt="" class="iconImage2" />
-          <div class="temps">
-            <p class="lowtemp">14°</p>
-            <p class="hightemp">12°</p>
-          </div>
-        </div>
-      
-        <div class="futureDay four">
-          <p class="dayName">Thursday</p>
-          <img src="C:\Users\kusin\Desktop\WeatherApp\src\reshot-icon-sun-S9ZW4T6UGQ.svg" alt="" class="iconImage2" />
-          <div class="temps">
-            <p class="lowtemp">14°</p>
-            <p class="hightemp">12°</p>
-          </div>
-        </div>
-      
-        <div class="futureDay five">
-          <p class="dayName">Friday</p>
-          <img src="C:\Users\kusin\Desktop\WeatherApp\src\reshot-icon-sun-S9ZW4T6UGQ.svg" alt="" class="iconImage2" />
-          <div class="temps">
-            <p class="lowtemp">14°</p>
-            <p class="hightemp">12°</p>
-          </div>
-        </div>
-      </div>
-      
-
+      <!-- ✅ Footer -->
       <div class="link">
-        <p >
-          This project was coded by <a href="">Arina Kusiniceva</a> and is
+        <p>
+          This project was coded by <a href="https://www.linkedin.com/in/arina-kusiniceva-b7b686175">Arina Kusiniceva</a> and is
           <a href="https://github.com/kusinicevaa">open-sourced on GitHub</a> and
-          <a href="">hosted on Netlify</a>
+          <a href="https://aviagirlweather.netlify.app/">hosted on Netlify</a>
         </p>
       </div>
-
     </div>
   </body>
 </html>
