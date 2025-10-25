@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-  //unit toggle global variable
-  let isMetric = true;
 
   // Weekdays & months arrays for human readability
   const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -63,11 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let tempC = Math.round(response.data.temperature.current);
     let tempF = Math.round((tempC * 9/5) + 32);
     let temp = document.querySelector(".temperature");
-   if (isMetric) {
-  temp.innerHTML = `${tempC}°C`;
-} else {
-  temp.innerHTML = `${tempF}°F`;
-}
+  temp.innerHTML = `${tempC}°C ${tempF}°F`;
+
 
     let hum = Math.round(response.data.temperature.humidity);
     let humidity = document.querySelector(".humidity");
@@ -76,11 +71,9 @@ document.addEventListener("DOMContentLoaded", function () {
     let windKmh = Math.round(response.data.wind.speed);
     let windMph = Math.round(windKmh/ 1.609);
     let wind = document.querySelector(".wind");
-    if (isMetric) {
-  wind.innerHTML = `Wind: ${windKmh} km/h`;
-} else {
-  wind.innerHTML = `Wind: ${windMph} mph`;
-}
+
+  wind.innerHTML = `Wind: ${windKmh} km/h ${windMph} mph`;
+
 
     let i = response.data.condition.icon_url;
     let icon = document.querySelector(".weatherIcon");
@@ -125,9 +118,5 @@ document.addEventListener("DOMContentLoaded", function () {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
 
-  document.querySelector(".unitToggle").addEventListener("click", function()
-  {
-    isMetric=!isMetric;
-  }
-)
+
 });
