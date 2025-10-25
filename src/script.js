@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+  //unit toggle global variable
+  let isMetric = true;
+
   // Weekdays & months arrays for human readability
   const weekdays = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
   const months =["Jan","Feb","Mar","Apr","May", "Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
@@ -60,16 +63,24 @@ document.addEventListener("DOMContentLoaded", function () {
     let tempC = Math.round(response.data.temperature.current);
     let tempF = Math.round((tempC * 9/5) + 32);
     let temp = document.querySelector(".temperature");
-    temp.innerHTML = tempC + "°C" + " (" + tempF + "°F)";
+   if (isMetric) {
+  temp.innerHTML = `${tempC}°C`;
+} else {
+  temp.innerHTML = `${tempF}°F`;
+}
 
     let hum = Math.round(response.data.temperature.humidity);
     let humidity = document.querySelector(".humidity");
     humidity.innerHTML = "Humidity: " + hum + "%";
 
-    let w = Math.round(response.data.wind.speed);
-    let wm = Math.round(w / 1.609);
+    let windKmh = Math.round(response.data.wind.speed);
+    let windMph = Math.round(windKmh/ 1.609);
     let wind = document.querySelector(".wind");
-    wind.innerHTML = "Wind: " + w + "km/h (" + wm + "mph)";
+    if (isMetric) {
+  wind.innerHTML = `Wind: ${windKmh} km/h`;
+} else {
+  wind.innerHTML = `Wind: ${windMph} mph`;
+}
 
     let i = response.data.condition.icon_url;
     let icon = document.querySelector(".weatherIcon");
@@ -113,4 +124,10 @@ document.addEventListener("DOMContentLoaded", function () {
   function toUpperCaseFirst(str) {
     return str.charAt(0).toUpperCase() + str.slice(1);
   }
+
+  document.querySelector(".unitToggle").addEventListener("click", function()
+  {
+    isMetric=!isMetric;
+  }
+)
 });
