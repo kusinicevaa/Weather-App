@@ -35,20 +35,32 @@ document.addEventListener("DOMContentLoaded", function () {
   let cd = document.querySelector('.time');
   cd.innerHTML = currentDate;
 
-  // Search functionality: change city based on user input
-  document.querySelector('.btnsearch').addEventListener('click', function () {
-    let userinput = document.querySelector('.textinput').value;
-    let cityDisplay = document.querySelector('#city');
-    cityDisplay.innerHTML = toUpperCaseFirst(userinput);
+  // Search functionality: change city based on user input and error hadling cities
+document.querySelector('.btnsearch').addEventListener('click', function () {
+  let userinput = document.querySelector('.textinput').value.trim();
 
-    // API calls to get current data for current city
+  if (userinput !== "") {
     let apiKey = "2fe0fte9o61ef8dffd6b25a86d413730";
     let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${userinput}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(cityTemperature);
 
-    let apiUrlForecast = `https://api.shecodes.io/weather/v1/forecast?query=${userinput}&key=${apiKey}`;
-    axios.get(apiUrlForecast).then(forecast);
+   axios.get(apiUrl)
+  .then(function (response) {
+    if (response.data && response.data.city) {
+      let cityDisplay = document.querySelector('#city');
+      cityDisplay.innerHTML = toUpperCaseFirst(response.data.city);
+
+      cityTemperature(response);
+
+      let apiUrlForecast = `https://api.shecodes.io/weather/v1/forecast?query=${userinput}&key=${apiKey}`;
+      axios.get(apiUrlForecast).then(forecast);
+    } else {
+      alert("The city could not be found, please check the spelling");
+    }
+  })
+  .catch(function (error) {
+    alert("The city could not be found, please check the spelling");
   });
+}});
 
   // Current weather handler
   function cityTemperature(response) {
@@ -119,4 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-});
+}
+
+
+);
